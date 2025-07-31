@@ -1,0 +1,932 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Top Contact Bar */
+.top-contact-bar {
+  background: #0d47a1;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  position: relative;
+  z-index: 10;
+}
+.contact-bar-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  padding: 6px 0;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+.contact-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.contact-item a:hover {
+  color: #ffd600;
+  text-decoration: underline;
+}
+.contact-item i {
+  font-size: 15px;
+  color: #fff;
+}
+
+/* Wave SVG */
+.wave-wrapper {
+  background: #0d47a1;
+  position: relative;
+  z-index: 9;
+  height: 40px;
+  overflow: hidden;
+}
+.wave-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Main Header (Logo + Nav) */
+.main-header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+.header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1976d2;
+  text-shadow: 0 2px 8px rgba(34,46,54,0.08);
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list li {
+  display: block;
+}
+.nav-list a {
+  color: #222e36;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 10px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+.nav-list a:hover {
+  color: #1976d2;
+  border-bottom: 2px solid #1976d2;
+}
+.nav-list a.active {
+  color: #1976d2;
+  font-weight: 700;
+  border-bottom: 2px solid #1976d2;
+}
+
+/* Nav Toggle (Mobile) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #1976d2;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .contact-bar-content {
+    gap: 18px;
+    font-size: 14px;
+  }
+  .header-title {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 700px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: unset;
+    padding: 10px 0;
+  }
+  .main-nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .logo-title {
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f6f8fa;
+    color: #1a1a1a;
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+  .container {
+    padding: 0 8px;
+  }
+  .brand-header-mobile {
+    padding: 1.5rem 0 1rem 0 !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    background: #fff;
+  }
+  .brand-header-mobile img {
+    height: 56px !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .brand-header-mobile span {
+    font-size: 1.7rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 2.5px !important;
+    color: #0d47a1 !important;
+    text-shadow: 0 2px 8px rgba(13,71,161,0.08);
+  }
+  .main-header {
+    box-shadow: none !important;
+    border-bottom: 1px solid #e3e8ee !important;
+    min-height: unset !important;
+  }
+  .header-flex {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.5rem 0.5rem !important;
+    gap: 0 !important;
+  }
+  .carousel-caption {
+    padding: 1.2rem 0.5rem !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(13,71,161,0.07);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(13,71,161,0.07);
+  }
+  .carousel-caption h1, .carousel-caption p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-family: 'Poppins', Arial, sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.2px !important;
+    color: #0d47a1 !important;
+    text-shadow: 0 2px 8px rgba(13,71,161,0.08);
+  }
+  .carousel-caption h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .carousel-caption p {
+    font-size: 1.08rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .carousel-caption .btn-cta {
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0.5rem auto !important;
+    font-size: 1.1rem !important;
+    padding: 1rem 0 !important;
+    border-radius: 32px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 16px rgba(13,71,161,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+  .carousel-caption .btn-cta-primary {
+    background: linear-gradient(90deg, #1976d2 0%, #0d47a1 100%) !important;
+    color: #fff !important;
+    border: none !important;
+  }
+  .carousel-caption .btn-cta-outline {
+    background: #fff !important;
+    color: #0d47a1 !important;
+    border: 2px solid #0d47a1 !important;
+  }
+  .carousel-caption .btn-cta:hover {
+    box-shadow: 0 8px 24px rgba(13,71,161,0.18);
+    transform: translateY(-2px) scale(1.03);
+  }
+  .main-headline, h2, h3, h4 {
+    font-size: 1.3rem !important;
+    text-align: center !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.2px !important;
+    color: #0d47a1 !important;
+    margin: 1.2rem 0 0.8rem 0 !important;
+    font-family: 'Poppins', Arial, sans-serif !important;
+  }
+  .product-tile, .application-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto 1.2rem auto !important;
+    padding: 1.5rem 0.7rem !important;
+    background: #fff !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 18px rgba(13,71,161,0.07);
+    border: none !important;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .product-tile img, .application-card img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 220px !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(13,71,161,0.08);
+    object-fit: contain !important;
+    background: #f8fafc !important;
+  }
+  .product-tile:active, .application-card:active {
+    box-shadow: 0 8px 32px rgba(13,71,161,0.13);
+    transform: scale(0.98);
+  }
+  .footer-dark {
+    padding: 32px 0 12px 0 !important;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+    color: #fff !important;
+    border-radius: 18px 18px 0 0 !important;
+    box-shadow: 0 -2px 12px rgba(13,71,161,0.07);
+  }
+  .footer-logo-img {
+    height: 44px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-company-name {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    letter-spacing: 1.2px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-description, .footer-links, .footer-contact, .footer-social {
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+  }
+  .footer-links a, .footer-social .social-link {
+    font-size: 1.1rem !important;
+    padding: 0.7rem 0 !important;
+    color: #b8c5d6 !important;
+    display: block !important;
+    border-radius: 8px !important;
+    margin-bottom: 0.3rem !important;
+    transition: background 0.2s, color 0.2s;
+  }
+  .footer-links a:hover, .footer-social .social-link:hover {
+    background: #222e36 !important;
+    color: #ffd600 !important;
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12) !important;
+    padding-top: 16px !important;
+    margin-top: 24px !important;
+    text-align: center !important;
+    font-size: 0.98rem !important;
+    color: #b8c5d6 !important;
+  }
+  /* Overlay menu enhancements */
+  #mobileMenuOverlay {
+    background: rgba(13, 71, 161, 0.97) !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 32px rgba(13,71,161,0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 4000;
+  }
+  #mobileMenuOverlay ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  #mobileMenuOverlay li {
+    margin: 0;
+    padding: 0;
+  }
+  #mobileMenuOverlay a {
+    display: block;
+    padding: 1.3rem 0;
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.2s, color 0.2s;
+  }
+  #mobileMenuOverlay a:active, #mobileMenuOverlay a:hover {
+    background: #1976d2;
+    color: #ffd600;
+  }
+  /* Animations */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Animated gradient background for hero/banner */
+  .hero-gradient {
+    background: linear-gradient(120deg, #0d47a1 0%, #1976d2 50%, #ffd600 100%);
+    background-size: 200% 200%;
+    animation: heroGradientMove 8s ease-in-out infinite;
+  }
+  @keyframes heroGradientMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  /* Custom accent color for buttons and highlights */
+  .btn-cta-primary {
+    background: linear-gradient(90deg, #ffd600 0%, #0d47a1 100%) !important;
+    color: #0d47a1 !important;
+    border: none !important;
+    box-shadow: 0 4px 16px rgba(255,214,0,0.10);
+  }
+  .btn-cta-primary:hover {
+    background: linear-gradient(90deg, #0d47a1 0%, #ffd600 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 8px 24px rgba(255,214,0,0.18);
+  }
+  .btn-cta-outline {
+    background: #fff !important;
+    color: #ffd600 !important;
+    border: 2px solid #ffd600 !important;
+  }
+  .btn-cta-outline:hover {
+    background: #ffd600 !important;
+    color: #0d47a1 !important;
+  }
+  /* Accent color for highlights */
+  .main-headline, h2, h3, h4 {
+    color: #ffd600 !important;
+    text-shadow: 0 2px 8px rgba(255,214,0,0.08);
+  }
+  .footer-links a:hover, .footer-social .social-link:hover {
+    background: #ffd600 !important;
+    color: #0d47a1 !important;
+  }
+  .product-tile {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto 1.2rem auto !important;
+    padding: 1.5rem 0.7rem !important;
+    background: #fff !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 18px rgba(13,71,161,0.07);
+    border: none !important;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .product-tile img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+    width: 90% !important;
+    max-width: 180px !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(13,71,161,0.08);
+    object-fit: contain !important;
+    background: #f8fafc !important;
+  }
+  body > header.main-header {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body > header.main-header,
+  body > header.main-header .main-nav {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .brand-header-mobile {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative;
+  }
+  .brand-header-mobile > .nav-toggle {
+    margin-left: auto !important;
+    order: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .brand-header-mobile > .nav-toggle:not(:last-child) {
+    display: none !important;
+  }
+  .brand-header-mobile::before,
+  .brand-header-mobile::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+  }
+} 
+
+/* Comprehensive Mobile Responsiveness for All Screen Sizes */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .brand-header-mobile {
+    padding: 1rem 0 0.8rem 0 !important;
+  }
+  
+  .header-brand-premium {
+    font-size: 1.4rem !important;
+    letter-spacing: 1.8px !important;
+    height: 40px !important;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .btn-cta {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .product-tile img, .application-card img {
+    width: 100% !important;
+    max-width: 280px !important;
+    height: 200px !important;
+  }
+  
+  .main-headline {
+    font-size: 1.6rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  h2 {
+    font-size: 1.4rem !important;
+  }
+  
+  h3 {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 8px;
+  }
+  
+  .brand-header-mobile {
+    padding: 0.8rem 0 0.6rem 0 !important;
+  }
+  
+  .header-brand-premium {
+    font-size: 1.2rem !important;
+    letter-spacing: 1.5px !important;
+    height: 36px !important;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.85rem !important;
+  }
+  
+  .btn-cta {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .product-tile img, .application-card img {
+    max-width: 240px !important;
+    height: 180px !important;
+  }
+  
+  .main-headline {
+    font-size: 1.4rem !important;
+  }
+  
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  h3 {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 6px;
+  }
+  
+  .brand-header-mobile {
+    padding: 0.7rem 0 0.5rem 0 !important;
+  }
+  
+  .header-brand-premium {
+    font-size: 1.1rem !important;
+    letter-spacing: 1.2px !important;
+    height: 32px !important;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.8rem !important;
+  }
+  
+  .btn-cta {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .product-tile img, .application-card img {
+    max-width: 220px !important;
+    height: 160px !important;
+  }
+  
+  .main-headline {
+    font-size: 1.3rem !important;
+  }
+  
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  h3 {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 0 4px;
+  }
+  
+  .brand-header-mobile {
+    padding: 0.6rem 0 0.4rem 0 !important;
+  }
+  
+  .header-brand-premium {
+    font-size: 1rem !important;
+    letter-spacing: 1px !important;
+    height: 28px !important;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 1.2rem !important;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.75rem !important;
+  }
+  
+  .btn-cta {
+    padding: 0.35rem 0.7rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .product-tile img, .application-card img {
+    max-width: 200px !important;
+    height: 140px !important;
+  }
+  
+  .main-headline {
+    font-size: 1.2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.1rem !important;
+  }
+  
+  h3 {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 900px) and (orientation: landscape) {
+  .brand-header-mobile {
+    padding: 0.8rem 0 0.6rem 0 !important;
+  }
+  
+  .header-brand-premium {
+    font-size: 1.3rem !important;
+    height: 32px !important;
+  }
+  
+  .carousel-caption {
+    padding: 1rem !important;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 1.6rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+  
+  .btn-cta {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Extra Small Height Screens */
+@media (max-height: 600px) {
+  .brand-header-mobile {
+    padding: 0.6rem 0 0.4rem 0 !important;
+  }
+  
+  .header-brand-premium {
+    height: 28px !important;
+  }
+  
+  .carousel-caption {
+    padding: 0.8rem !important;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Ensure all interactive elements are properly sized for touch */
+@media (max-width: 600px) {
+  button, .btn, a {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  .nav-toggle {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Ensure proper spacing for touch targets */
+  .product-tile, .application-card {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Improve readability on small screens */
+  p, li {
+    line-height: 1.6 !important;
+  }
+  
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Better table responsiveness */
+  table {
+    font-size: 0.85rem !important;
+  }
+  
+  th, td {
+    padding: 0.5rem 0.3rem !important;
+  }
+}
+
+/* Fix for very wide mobile screens (tablets in portrait) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .brand-header-mobile {
+    padding: 1.2rem 0 1rem 0 !important;
+  }
+  
+  .header-brand-premium {
+    font-size: 1.5rem !important;
+    letter-spacing: 2px !important;
+  }
+  
+  .product-tile img, .application-card img {
+    max-width: 320px !important;
+    height: 240px !important;
+  }
+}
+
+/* Ensure proper viewport handling */
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  
+  .container, .row, .col {
+    overflow-x: hidden !important;
+  }
+  
+  /* Prevent horizontal scrolling */
+  * {
+    box-sizing: border-box !important;
+  }
+} 
+
+/* Ensure mobile menu button is always visible */
+@media (max-width: 600px) {
+  #mobileMenuBtn {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 9999 !important;
+    position: relative !important;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    padding: 8px !important;
+    font-size: 2.1rem !important;
+    color: #0d47a1 !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  #mobileMenuBtn i {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .brand-header-mobile .nav-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+} 
+
+/* Ensure mobile menu button stays within screen bounds */
+@media (max-width: 600px) {
+  .brand-header-mobile {
+    overflow: visible !important;
+    position: relative !important;
+  }
+  
+  .brand-header-mobile > div {
+    max-width: 100vw !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+  
+  #mobileMenuBtn {
+    position: relative !important;
+    right: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 4px !important;
+    flex-shrink: 0 !important;
+    max-width: 44px !important;
+    max-height: 44px !important;
+  }
+  
+  .header-brand-premium {
+    flex: 1 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+
+/* Extra small screens - further reduce spacing */
+@media (max-width: 400px) {
+  .brand-header-mobile > div {
+    padding: 0 4px !important;
+  }
+  
+  .header-brand-premium {
+    font-size: 1.4rem !important;
+    letter-spacing: 1.8px !important;
+  }
+  
+  #mobileMenuBtn {
+    padding: 2px !important;
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Very small screens - minimal spacing */
+@media (max-width: 360px) {
+  .brand-header-mobile > div {
+    padding: 0 2px !important;
+  }
+  
+  .header-brand-premium {
+    font-size: 1.2rem !important;
+    letter-spacing: 1.5px !important;
+  }
+  
+  #mobileMenuBtn {
+    padding: 1px !important;
+    font-size: 1.6rem !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+  }
+} 
